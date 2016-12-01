@@ -1,0 +1,323 @@
+<div class="sidebar_function">
+	<div class="sb_cart sb_btn" data-show-active="0">
+		<p class="cut-line"></p>
+		<i></i>
+		<p class="name">
+			购
+			<br /> 物
+			<br /> 车
+		</p>
+		<span class="cart_num count">0</span>
+	</div>
+	<p class="cut-line"></p>
+	<div class="sb_promo sb_btn sb_posi" data-show-active = "0">
+		<i></i>
+		<div class="item">
+			我的优惠券
+			<span></span>
+		</div>
+	</div>
+	<div class="sb_collect sb_btn sb_posi" data-show-active="0">
+		<i></i>
+		<div class="item">
+			我的收藏
+			<span></span>
+		</div>
+	</div>
+	<div class="qrcode">
+		<div class="qrcode_pop">
+			<span></span>
+			<div class="qrcode_img"></div>
+			<p>到手机达令</p>
+		</div>
+	</div>
+	<div class="go_top">
+		<img src="img/go_top.png" alt="返回顶部" title="返回顶部" />
+	</div>
+</div>
+<div class="sidebar_data">
+	<div class="close"></div>
+	<div class="cart_mini sb_show">
+		<div class="sb_header">
+			我的购物车
+		</div>
+		<div class="cart_table">
+			<div class="thead">
+				<span class="bg-red">无敌价</span>
+				<span>价格无敌 手慢无</span>
+			</div>
+			<ul class="goods">
+				<li class="td td-goods">
+					<a href="javascript:;" class="cover">
+						<div class="cover_img"></div>
+					</a>
+					<a href="javascript:;" class="name">
+						<span class="goods-title"></span>
+					</a>
+				</li>
+				<li class="td td-price">
+					<p>￥<span class="price"></span></p>
+				</li>
+				<li class="td td-number">
+					<div>
+						<a href="javascript:;" class="but-num reduce">-</a>
+						<input type="text" value="1" />
+						<a href="javascript:;" class="but-num add">+</a>
+					</div>
+				</li>
+				<li class="td td-total">
+					<p>￥<span class="total"></span></p>
+				</li>
+				<li class="td td-handle">
+					<a href="javascript:;" class="del">删除</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="sidebar_promo sb_show">
+		<div class="sb_header">
+			我的优惠券
+		</div>
+		<div class="unlogin">
+			<p>登陆后才能查看</p>
+			<a href="login-reg.html">登录</a>
+		</div>
+		<div class="promo_main">
+			<div class="promo_info">
+				<div class="promo_info_data promo_info1">
+					<span>张</span>
+					<br /> 可用优惠券
+				</div>
+				<div class="promo_info_data promo_info2">
+					可用金额
+				</div>
+			</div>
+			<ul>
+				<li class="tab_active active">未使用</li>
+				<li class="tab_used">已使用</li>
+				<li class="tab_old">已过期</li>
+			</ul>
+			<p>你还没有<span></span>的优惠券</p>
+		</div>
+	</div>
+	<div class="sidebar_collect sb_show">
+		<div class="sb_header">
+			我的收藏
+		</div>
+		<div class="unlogin">
+			<p>登陆后才能查看</p>
+			<a href="login-reg.html">登录</a>
+		</div>
+		<div class="log_coll">
+			<p>您还没有收藏任何商品，快去寻找心仪的全球好货吧~</p>
+			<a href="javascript:;">去购物>></a>
+		</div>
+	</div>
+</div>
+<script>
+	/*****侧边栏*****/
+	$(function() {
+		var $sbBtn = $(".sb_btn");
+		var $sbPosi = $(".item");
+		var $go_top = $(".go_top");
+		var $sbShow = $(".sb_show");
+		var $sbData = $(".sidebar_data");
+		$sbBtn.hover(function() {
+			$(this).css("background-color", "#E14958").find($sbPosi).show();
+		}, function() {
+			$(this).css("background-color", "").find($sbPosi).hide();
+		});
+		$(window).scroll(function() {
+			if($("html body").scrollTop() > 100) {
+				$go_top.show();
+			} else {
+				$go_top.hide();
+			}
+		});
+		$go_top.click(function() {
+			$("html,body").animate({
+				scrollTop: 0
+			});
+		});
+		//点击出现侧栏,再次点击隐藏
+	function tab(obj) {
+	        if ($(obj).attr('data-show-active') == 0) {
+	            $(".sidebar").animate({
+	                "right": "0"
+	            }, 300);
+	            $(obj).attr('data-show-active', 1).siblings().attr('data-show-active', 0);
+	
+	        } else if ($(obj).attr('data-show-active') == 1) {
+	            $(".sidebar").animate({
+	                "right": "-280px"
+	            }, 300);
+	            $(obj).attr('data-show-active', 0)
+	        }
+	    }
+	    $sbBtn.eq(0).click(function() {
+	        tab(this);
+	        $('.cart_mini').show().siblings().hide();
+	    });
+	
+	    $sbBtn.eq(1).click(function() {
+	        tab(this);
+	        $('.sidebar_promo').show().siblings().hide();
+	    });
+	
+	    $sbBtn.eq(2).click(function() {
+	        tab(this);
+	        $('.sidebar_collect').show().siblings().hide();
+	    });
+	});
+	//登录状态判断切换
+	$(function() {
+		var $unlogin = $(".unlogin");
+		var $promMain = $('.promo_main');
+		var $sbCollect = $('.sidebar_collect');
+		var $logColl = $('.log_coll');
+		if($.cookie("userMob") && $.cookie("userPsd")) {
+			$unlogin.hide();
+			$promMain.show();
+			$logColl.show();
+			$sbCollect.css({
+				'background-color': '#ededed',
+				'color': '#000'
+			});
+		} else {
+			$unlogin.show();
+			$promMain.hide();
+			$logColl.hide();
+			$sbCollect.css({
+				'background-color': '',
+				'color': ''
+			});
+		}
+	});
+	//添加购物车
+	$(function() {
+		if($.cookie("cartgoodsid")) {
+			var s = $.cookie("cartgoodsid").split(",");
+			var n = $.cookie("cartgoodnum").split(",");
+			for(var i = 0; i < s.length; i++) {
+				addInCart(s[i], n[i]);
+			}
+		}
+
+		function addInCart(sid, n) { //sid:当前商品的id，n:商品数量
+			$.getJSON("json/collect.json", function(res) {
+				for(var i = 0; i < res.data.length; i++) {
+					if(sid == res.data[i].sid) {
+						var $clone = $(".goods:hidden").clone(true);
+						$clone.find(".td-number").children("input").val(n);
+						//取商品的数量
+						var num = parseFloat($clone.find(".td-number input").val());
+						var price = parseFloat(res.data[i].newpri); //取商品单价
+						//写进商品标题
+						$clone.find(".goods-title").html(res.data[i].t);
+						//写进图片路径和商品sid
+						$clone.find(".td-goods .cover_img").attr({
+							"sid": res.data[i].sid
+						}).css("background-image", res.data[i].img);
+						//写进商品单价
+						$clone.find(".td-price .price").html(price.toFixed(2));
+						//计算单个商品的总价
+						$clone.find(".td-total .total").html((price * num).toFixed(2));
+						$clone.css("display", "block");
+						$clone.insertAfter(".thead"); //插入到thead后
+						checkCartStatus(); //查看购物车内是否有商品
+						selecNum();
+					}
+				}
+			});
+		}
+		function removeFromArray(id, array) {
+		    var arr = [];
+		    for (var i = 0; i < array.length; i++) {
+		        if (id != array[i]) {
+		            arr.push(array[i]);
+		        }
+		    }
+		    sidArray = arr;
+		    numArray.splice(array.indexOf(id), 1);
+		    $.cookie("cartgoodsid", sidArray.toString(), { expires: 7, path: '/' });
+		    $.cookie("cartgoodnum", numArray.toString(), { expires: 7, path: '/' });
+	    }
+			//获取cookie值，并转化成数组
+		function getGoodsCookie(){
+			if($.cookie("cartgoodsid")){
+				sidArray = $.cookie("cartgoodsid").split(",");
+			}else{
+				sidArray = [];
+			}
+			if($.cookie("cartgoodnum")){
+				numArray = $.cookie("cartgoodnum").split(",");
+			}else{
+				numArray = [];
+			}
+		}
+
+		function checkCartStatus() {
+			if($.cookie("cartgoodsid")) {
+				$(".cart_table").css("background", "none");
+				$(".thead").css("display", "block");
+			} else {
+				$(".cart_table").css("background", "url(../../img/test-img/cart_mini_empty.png) no-repeat center 46px");
+				$(".thead").css("display", "none");
+				$(".goods").css("display", "none");
+			}
+		}
+		//	//减少商品数量按钮
+		$(".reduce").click(function() {
+			var a = parseInt($(this).next().val());
+			a--;
+			if(a < 1) {
+				return false;
+			}
+			$(this).next().val(a);
+			selecNum();
+			$(this).parents(".td-number").siblings(".td-total").find(".total").html(itemP($(this)));
+		});
+		//增加商品数量
+		$(".add").click(function() {
+			var a = parseInt($(this).prev().val());
+			a++;
+			$(this).prev().val(a);
+			selecNum();
+			$(this).parents(".td-number").siblings(".td-total").find(".total").html(itemP($(this)));
+		});
+		//手动输入商品数量
+		$(".td-number input").change(function() {
+
+			if(!isNaN($(this).val()) && $(this).val() > 0) {
+				$(this).parents(".td-number").siblings(".td-total").find(".total").html(itemP($(this)));
+			} else {
+				$(this).val(1);
+				$(this).parents(".td-number").siblings(".td-total").find(".total").html(itemP($(this)));
+			}
+		});
+
+		function itemP(obj) {
+			var price = parseFloat(obj.parents(".td-number").siblings(".td-price").find(".price").html()); //单价
+			var num = parseFloat(obj.parent().children("input").val());
+			return(price * num).toFixed(2); //返回价格
+		}
+
+		function selecNum() {
+			$(".count").html($(".goods:visible").length);
+		}
+		$(".del").click(function() {
+			getGoodsCookie();
+			removeFromArray($(this).parents(".goods").find(".cover_img").attr("sid"), sidArray);
+			$(this).parents(".goods").remove();
+			selecNum();
+			checkCartStatus(); //查看购物车内是否有商品
+		});
+			//商品数量改变时修改cookie
+		$(".reduce,.add").click(function() {
+		    getGoodsCookie();
+		    var index = sidArray.indexOf($(this).parents(".goods").find(".cover_img").attr("sid"));
+		    numArray[index] = $(this).siblings("input").val();
+		    $.cookie("cartgoodnum", numArray.toString(), { expires: 7, path: '/' });
+		});
+	});
+</script>

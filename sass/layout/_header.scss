@@ -1,0 +1,83 @@
+/*header_S*/
+#header_w {
+    width: 100%;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #dadada;
+}
+
+#header {
+    @extend %centerEle;
+    height: 30px;
+}
+
+#header a {
+    line-height: 30px;
+}
+
+#header a:hover {
+    color: #e34755;
+    text-decoration: underline;
+}
+
+#header .header_user {
+    @extend %fr;
+    position: relative;
+}
+
+#header .header_user span {
+    margin: 0 5px;
+}
+
+ .header_user span i {
+    display: inline-block;
+    @include elesize($wid:13px,$hei:13px);
+    background: url(../../img/ico.png) no-repeat -26px -151px;
+    margin-right: 5px;
+}
+
+#header .header_user .reg_tip {
+    height: 30px;
+    padding: 0 5px;
+    background: #6a4084;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 5px;
+    @include elePos($top:25px,$left:40px);
+}
+
+#header .reg_tip .regtip_close {
+    cursor: pointer;
+}
+
+#header .reg_tip .regtip_t {
+    @include triangle($c:#6a4084,$top:5px);
+    @include elePos($top:-10px,$left:6px);
+}
+
+#header .header_user .download {
+    position: relative;
+}
+
+#header .download .code {
+    @include elePos($top:30px,$left:-20px);
+    @include elesize($wid:91px,$hei:91px);
+    padding: 15px;
+    background: #F2F2F2;
+    display: none;
+    z-index: 2;
+}
+
+#header .code .code_t {
+    @include elePos($top:-10px,$left:45px);
+    @include triangle($c:#f2f2f2,$direction:top);
+}
+
+ .code .code_pic {
+    display: block;
+    @include elesize($wid:91px,$hei:91px);
+    background: url(../../img/cod_da.png);
+    margin: 0;
+}
+ .login_info{
+    @extend %fl;
+}

@@ -1,0 +1,592 @@
+@charset "utf-8";
+
+.main_w{
+    width:100%;
+    height:auto;
+    background: #f9f9f9;
+    padding-bottom: 50px;
+    overflow: hidden;
+}
+.main{
+    @extend %centerEle;
+    height:auto;
+    padding-top:90px;
+}
+.main_tit{
+    @include elesize($wid:430px,$hei:1px);
+    background: #676767;
+    position: relative;
+    margin: 0 auto;
+}
+.main h2{
+    font-weight: 400;
+    padding-bottom: 14px;
+    position: relative;
+    padding-top: 34px;
+    font-size: 16px;
+    margin-left: 11px;
+}
+.main_tit p{
+    font-size: 30px;
+    @include elePos($top:-20px,$left:130px);
+    padding:0 10px;
+    background: #f9f9f9;
+}
+//今日必看
+.must{
+    @include elesize($wid:1220px,$hei:380px);
+    margin-left:-20px;
+}
+
+.must_tit_img{
+    display: inline-block;
+    @include elesize($wid:32px,$hei:38px);
+    vertical-align: middle;
+    line-height: 32px;
+    margin-right: 10px;
+}
+.must_tit_img{
+    background: url(../img/ico-title.png) no-repeat;
+}
+.tit_dd{
+    font-size: 14px;
+    padding-left: 28px;
+}
+.must_con li{
+    @extend %fl;
+    @include elesize($wid:590px,$hei:280px);
+    margin-left: 20px;
+}
+.must_con li a{
+    display: block;
+    @include elesize($wid:100%,$hei:100%);
+}
+.main li:hover{
+    box-shadow: 0 0 3px #999;
+}
+//今日上新
+.today_new{
+    @include elesize($wid:100%,$hei:734px);
+    
+}
+.change{
+    display: block;
+    @include elesize($wid:80px,$hei:29px);
+    background: #E14958;
+    color:#fff;
+    font-size: 14px;
+    line-height: 29px;
+    @extend %fr;
+    margin-right: 30px;
+    padding-left:10px;
+}
+.change:hover{
+    text-decoration: underline;
+}
+.change .change_new{
+    display: inline-block;
+    @include elesize($wid:23px,$hei:18px);
+    background: url(../img/ico.png) no-repeat 0 -136px;
+    vertical-align: middle;
+}
+.new_tit_img{
+    @extend .must_tit_img;
+    background: url(../img/ico-title.png) no-repeat 0 -39px;
+}
+.new_cont{
+    @include elesize($wid:100%,$hei:660px);
+//  overflow: hidden;
+}
+.new_cont .new_t{
+    @include elesize($wid:1220px,$hei:380px);
+    margin-bottom: 20px;
+    margin-left:-20px;
+}
+.new_cont .new_t li{
+    @extend %fl;
+    @include elesize($wid:283px,$hei:378px);
+    margin-left: 20px;
+    border:1px solid #e5e5e5;
+}
+.new_t li .new_img{
+    display: block;
+    @include elesize($wid:283px,$hei:268px);
+    background-position:center center;
+    background-size: cover;
+    position: relative;
+}
+.option{
+    @include elesize($wid:100%,$hei:30px);
+    background: #6A4084;
+    @include opacity(0.7);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color:#fff;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    display: none;
+}
+.option .add_cart{
+    display: inline-block;
+    @include elesize($wid:18px,$hei:16px);
+    margin: -5px 0 0 7px;
+    background: url(../img/ico.png) no-repeat 0 -88px;
+}
+.new_t .data .price{
+    @include elesize($wid:231px,$hei:30px);
+    padding-bottom: 8px;
+    @extend %centerEle;
+}
+.data .price i{
+    color:#E14958;
+}
+.data .price .now_pri{
+    padding-right: 4px;
+    font-size: 20px;
+    color: #e14958;
+}
+.data .price .now_pri i{
+    font-size: 12px;
+}
+.data .price .old_pri{
+    text-decoration: line-through;
+}
+.data .price .collect{
+    @extend %fr;
+    line-height: 30px;
+}
+.data .dec{
+    @include elesize($wid:231px,$hei:36px);
+    line-height: 18px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.data .dec a:hover{
+    text-decoration: underline;
+}
+.data .dec .discount{
+    color:#E14958;
+}
+.new_b{
+    @include elesize($wid:1220px,$hei:240px);
+    margin-left: -20px;
+}
+.new_b li{
+    @include elesize($wid:587px,$hei:238px);
+    border:1px solid #e5e5e5;
+    margin-left: 20px;
+    @extend %fl;
+}
+.new_b .new_img{
+    @include elesize($wid:283px,$hei:238px);
+    background-position:center center;
+    background-size: cover;
+    position: relative;
+    display: block;
+    @extend %fl;
+}
+.new_b .data{
+    @include elesize($wid:230px,$hei:74px);
+    padding:80px 24px 0 50px;
+    @extend %fl;
+}
+.worth{
+    @include elesize($wid:100%,$hei:356px);
+    margin-bottom: 40px;
+}
+.worth_tit_img{
+    @extend .must_tit_img;
+    background: url(../img/ico-title.png) no-repeat 0 -78px;
+}
+//神马值得买
+.main h3{
+    @include elesize($wid:1164px,$hei:36px);
+    padding-left:36px;
+    line-height: 36px;
+    font-size: 16px;
+}
+.main h3 span{
+    display: inline-block;
+    @include elesize($wid:11px,$hei:11px);
+    background: url(../img/ico-title-1.png);
+    margin-right: 4px;
+}
+.worth_cont{
+    @include elesize($wid:1200px,$hei:140px);
+    padding:42px 0 52px 0;
+    margin-bottom: 42px;
+    background: #fff;
+}
+.worth_cont ul{
+    @include elesize($wid:1170px,$hei:140px);
+    padding-left:30px;
+}
+.worth_cont ul li{
+    @extend %fl;
+    margin: 0 10px;
+}
+//大家都说好
+.good{
+    @include elesize($wid:1200px,$hei:1041px);
+    background: #fff;
+    margin-bottom: 40px;
+}
+.good_tab{
+    @include elesize($wid:1164px,$hei:30px);
+    padding-top: 42px;
+    border-bottom: solid 1px #e5e5e5;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 36px;
+    margin-bottom: 40px;
+}
+.good_tab li{
+    @extend %fl;
+    margin-right: 10px;
+    padding: 0 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #E5E5E5;
+    border-bottom: none; 
+}
+.good_tab li:hover{
+    box-shadow: none;
+}
+.current{
+    background: #E14958;
+    color:#fff;
+}
+.good_list{
+    @include elesize($wid:1233px,$hei:928px);
+    margin-left: -33px;
+    position: relative;
+}
+.good_list .data{
+    padding-left: 10px;
+}
+.good_list li{
+    @include elesize($wid:280px,$hei:422px);
+    @extend %fl;
+    margin-left: 100px;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #fff;
+}
+.good_list li .good_img{
+    display: block;
+    @include elesize($wid:280px,$hei:280px);
+    background-position: center center;
+    background-size: cover;
+}
+.good_list .dec{
+    margin: 10px 0;
+}
+.comment{
+    @include elesize($wid:258px,$hei:40px);
+    background: #fffcdb;
+    border-radius: 25px;
+    padding:5px;
+}
+.comment .face{
+   @include elesize($wid:35px,$hei:35px);
+   border-radius: 50%; 
+   background: url(../img/test-img/1440241542581.jpg);
+   background-size: cover;
+   @extend %fl;
+}
+.comment .com_text{
+   @include elesize($wid:180px,$hei:60px);
+   @extend %fl;
+}
+.comment .com_text p{
+    @include elesize($wid:190px,$hei:20px);
+    line-height: 20px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+.comment span{
+    clear: both;
+}
+//买了又买
+.buy_again{
+    @include elesize($wid:1200px,$hei:470px);
+    padding-left: 10px;
+    margin-bottom: 40px;
+    background: #fff;
+}
+.buy_again dl{
+    @include elesize($wid:394px,$hei:470px);
+    @extend %fl;
+}
+.buy_again dl dt{
+    @include elesize($wid:394px,$hei:46px);
+    text-align: center;
+    line-height: 47px;
+    color:#E14958;
+    font-size: 16px;
+    border-bottom:1px solid #eee;
+}
+.buy_again dl .tag{
+    display: block;
+    @include elesize($wid:70px,$hei:20px);
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #E14958;
+    @include elePos($top:0,$left:0);
+}
+.buy_again dl .gray{
+    background-color:#c6c6c6;
+}
+.buy_again dl .first{
+    @include elesize($wid:354px,$hei:166px);
+    padding: 38px 20px 10px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.buy_again dl .first .buy_img{
+    display: block;
+    @extend %fl;
+    @include elesize($wid:166px,$hei:166px);
+    background-position: center center;
+    background-size: cover;
+}
+ .first .data{
+    @extend %fl;
+    @include elesize($wid:178px,$hei:134px);
+    padding-left:10px;
+    overflow: hidden;
+}
+.first .data .title{
+   @include elesize($wid:178px,$hei:56px); 
+   line-height: 18px;
+}
+.data a:hover{
+    text-decoration: underline;
+}
+.data_more{
+   @include elesize($wid:178px,$hei:78px); 
+   line-height: 18px;
+}
+ .data_more .price{
+    margin: 10px 0;
+}
+ .data_more .state{
+    color:#999;
+}
+ .data_more .state a{
+    color:#999;
+}
+.buy_again dl .ex_first{
+   @include elesize($wid:314px,$hei:52px); 
+   position: relative;
+   border-bottom:1px solid #eee;
+   padding-left:80px;
+}
+.buy_again dl .ex_first .buy_img{
+    display: block;
+    @extend %fl;
+    @include elesize($wid:45px,$hei:45px);
+    background-position: center center;
+    background-size: cover;
+}
+.buy_again dl .ex_first .data{
+  @include elesize($wid:224px,$hei:45px);  
+  @extend %fl;
+  padding-left:10px;
+  overflow: hidden;
+}
+.ex_first .data .title{
+   @include elesize($wid:224px,$hei:45px); 
+   line-height: 45px;
+}
+//新品黑马
+.newest{
+    @include elesize($wid:1200px,$hei:900px);
+    padding-top:42px;
+    margin-bottom: 50px;
+    background-color:#fff;
+}
+.sign{
+    position: absolute;
+    top:-1px;
+    right:10px;
+}
+//今日特购
+.sale{
+    @include elesize($wid:1200px,$hei:auto); 
+}
+.cover_img{   
+    background-position: center center;
+    background-size: cover;
+}
+.sale_tit_img{
+    @extend .must_tit_img;
+    background: url(../img/ico-title.png) no-repeat 0 -117px;
+}
+.sale_box{
+    @include elesize($wid:1200px,$hei:1232px);   
+}
+.sale_list{
+    @include elesize($wid:786px,$hei:auto);
+    @extend %fl;
+}
+.sale_list li{
+    @include elesize($wid:786px,$hei:282px);
+    background: #fff;
+    margin-bottom: 20px;
+}
+.sale_list li .sale_img{
+    display: block;
+    @extend %fl;
+    @include elesize($wid:492px,$hei:280px);
+}
+.sale_img .cover_img{
+    margin: 0 auto;
+    @include elesize($wid:280px,$hei:280px);
+}
+.sale_list li .data{
+    @include elesize($wid:240px,$hei:268px);
+    @extend %fl;
+    padding:0 26px;
+}
+.sale_list .title{
+    @include elesize($wid:240px,$hei:34px);
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+.sale_list .title .discount{
+    color:#E14958;
+}
+.data .timeout{
+    @include elesize($wid:194px,$hei:26px);
+    background-color: #000;
+    text-align: center;
+    margin:  0 auto 20px;
+    color:#fff;
+    font-size: 14px;
+    line-height: 26px;
+}
+.sale_list .panic{
+    @include elesize($wid:240px,$hei:62px);
+    overflow: hidden;
+}
+.panic .btn_buy{
+    display: block;
+    @extend %fl;
+    @include elesize($wid:140px,$hei:38px);
+    margin-top: 24px;
+    background-color: #E14958;
+    line-height: 38px;
+    font-size: 14px;
+    color:#fff;
+    text-align: center;
+}
+.sale_list .more{
+    @include elesize($wid:784px,$hei:26px);
+    border: 1px solid #e0e0e0;
+    background-color:#f3f3f3 ;
+    line-height: 26px;
+    text-align: center;
+    cursor:pointer;
+}
+.panic .info{
+    display:inline-block;
+    padding: 40px 0 0 16px;
+}
+.data .intro{
+    @include elesize($wid:240px,$hei:70px);
+    margin: 4px 0 20px 0;
+    overflow: hidden;
+    line-height: 18px;
+    color:#999;
+}
+.sale_tommrow{
+    @include elesize($wid:386px,$hei:1146px);
+    @extend %fr;
+}
+.sale_tommrow .tommrow_title{
+   @include elesize($wid:386px,$hei:48px); 
+   padding-bottom: 10px;
+   font-size: 18px;
+   text-align: center;
+}
+.tommrow_title .tom_tit_tip{
+    line-height: 24px;
+    font-size: 14px;
+}
+.sale_tommrow ul{
+@include elesize($wid:386px,$hei:1060px); 
+overflow: hidden; 
+}
+.sale_tommrow li{
+    @include elesize($wid:386px,$hei:193px); 
+    margin-bottom: 19px;
+    background-color: #fff;
+}
+.sale_tommrow .cover_img{
+   @include elesize($wid:236px,$hei:193px);  
+   @extend %fl;
+}
+.sale_tommrow .data{
+  @include elesize($wid:122px,$hei:170px);    
+  overflow: hidden;
+  padding: 18px 13px 0;
+  line-height: 14px;
+}
+.sale_tommrow .title{
+    @include elesize($wid:122px,$hei:50px); 
+    margin-bottom: 10px;
+}
+.sale_tommrow .data .intro{
+    @include elesize($wid:122px,$hei:70px); 
+    color: #888;
+    margin: 4px 0 20px;
+    overflow: hidden;
+    line-height: 18px
+}
+.sale_tommrow .panic{
+    @include elesize($wid:122px,$hei:20px);
+}
+.sale_tommrow .panic a{
+    display: inline-block;
+    @extend %fl;
+    line-height: 15px;
+}
+.sale_tommrow .panic a span{
+    display: inline-block;
+    @include elesize($wid:18px,$hei:15px);
+    background: url(../img/ico.png) -23px 0px;
+}
+.sale_tommrow .panic button{
+    @extend %fr;
+    @include elesize($wid:75px,$hei:20px);
+    background-color: #E14958;
+    color:#fff;
+    border:none;
+    padding:0;
+    cursor: pointer;
+}
+.scroll{
+    @include elesize($wid:140px,$hei:18px);
+    margin:  0 auto;
+    overflow: hidden;
+}
+.scrollup{
+    cursor: pointer;
+    vertical-align: middle;
+    display: inline-block;
+    @include elesize($wid:20px,$hei:16px);
+    background: url(../img/ico_arrow.png) no-repeat -29px -2px;
+    margin-left: 50px;
+}
+.scrolldown{
+    @extend .scrollup;
+    background: url(../img/ico_arrow.png) 0 -2px;
+    margin-left: 20px;
+}

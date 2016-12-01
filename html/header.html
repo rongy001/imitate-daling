@@ -1,0 +1,58 @@
+<div id="header">
+	<a href="#">消费者告知书</a>
+	<div class="header_user">
+		<div class="reg_tip">
+			注册既得 新人专享优惠券
+			<span class="regtip_close" onclick="$('.reg_tip').hide()">×</span>
+			<span class="regtip_t"></span>
+		</div>
+		<div class="login_info"></div>
+		<a href="login-reg.html" class="da_log">登录</a>
+		<span>|</span>
+		<a href="login-reg.html" class = "da_reg">注册</a>
+		<span>|</span>
+		<span><i></i>400-080-1888</span>
+		<span>|</span>
+		<a href="#" class="download">
+			下载达令app
+			<div class="code">
+				<span class="code_t"></span>
+				<span class="code_pic"></span>
+			</div>
+		</a>
+	</div>
+</div>
+<script>
+/****登录判断****/
+$(function(){
+	var daLog = $('.da_log');
+	var daReg = $('.da_reg');
+	var regTip = $('.reg_tip');
+	var $login_box = $('.login_info');
+	var logininfo = "<a href='javascript:;'>欢迎您，"+$.cookie('userMob')+"</a><a href='javascript:;' class='logout'>[退出]</a><span>|</span><a href='javascript:;'>我的订单</a><span>|</span><a href='html/shopping-cart.html'>我的购物车</a><span>|</span><a href='javascript:;'>我的收藏</a>";
+	if($.cookie("userMob")&&$.cookie("userPsd")){
+		daLog.hide();
+		daReg.hide().next().hide();
+		regTip.hide();
+		$login_box.prepend(logininfo);
+	}
+	//退出
+	var $logout = $('.logout');
+	$logout.click(function(){
+		$.cookie("userMob",'',{ path: '/' });
+		$.cookie("userPsd",'',{ path: '/' });
+		daLog.show();
+		daReg.show().next().show();
+		regTip.show();
+		$login_box.hide();
+	});
+});
+//移入移出隐藏显示二维码
+$(function(){
+	$('.download').hover(function(){
+		$('.code').show();
+	},function(){
+		$('.code').hide();
+	});
+});
+</script>

@@ -1,0 +1,80 @@
+/*banner_S*/
+
+#banner {
+    @extend %centerEle;
+    height: 87px;
+    margin-top: 30px;
+}
+
+#banner .logo a {
+    display: block;
+    @include elesize($wid:280px,$hei:40px);
+    @extend %fl;
+    background: url(../../img/logo.png);
+    text-indent: -999999px;
+}
+
+#banner .promo a {
+    display: block;
+    @extend %fl;
+    @include elesize($wid:120px,$hei:100px);
+    background: url(../../img/youhui.gif);
+    margin: -20px 0 0 20px;
+}
+
+#banner .search {
+    @include elesize($wid:394px,$hei:87px);
+    @extend %fl;
+    margin-left: 100px;
+}
+
+#banner .search input {
+    @extend %fl;
+    @include elesize($wid:305px,$hei:36px);
+    border: 1px solid #6A4084;
+    padding: 0 3px;
+}
+
+#banner .search .btn {
+    @extend %fl;
+    @include elesize($wid:81px,$hei:38px);
+    background: #6A4084;
+    color: #fff;
+    font-size: 18px;
+}
+
+#banner .search ul li {
+    @extend %fl;
+    margin: 10px 8px 0 0;
+}
+
+#banner .search ul li a:hover {
+    color: #E34755;
+}
+#banner .my_cart{
+    @include elesize($wid:168px,$hei:38px);
+    border:1px solid #dadada;
+    background:#f2f2f2 url(../../img/da-header-cart-bg.jpg) no-repeat 15px 7px;
+    position: relative;
+    @extend %fr;
+}
+#banner .my_cart a{
+    line-height: 38px;
+    text-indent: 60px;
+    font-weight: 700;
+    font-size: 14px;
+    display: block;
+    @include elesize($wid:100%,$hei:100%);
+    @include opacity(0.8);
+    background: url(../../img/da-header-cart-bg2.png) 150px 13px no-repeat;
+}
+#banner .my_cart span{
+    display: block;
+    color:#fff;
+    @include elesize($wid:20px,$hei:20px);
+    background: #E34755;
+    text-align: center;
+    line-height: 20px;
+    border-radius:10px;
+    @include elePos($top:-5px,$left:127px);
+}

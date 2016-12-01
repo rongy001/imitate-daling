@@ -1,0 +1,817 @@
+.main, .new_t .data .price {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.slider li, .pages li, .must_con li, .new_cont .new_t li, .new_b li, .new_b .new_img, .new_b .data, .worth_cont ul li, .good_tab li, .good_list li, .comment .face, .comment .com_text, .buy_again dl, .buy_again dl .first .buy_img, .first .data, .buy_again dl .ex_first .buy_img, .buy_again dl .ex_first .data, .sale_list, .sale_list li .sale_img, .sale_list li .data, .panic .btn_buy, .sale_tommrow .cover_img, .sale_tommrow .panic a {
+  float: left;
+}
+
+.change, .data .price .collect, .sale_tommrow, .sale_tommrow .panic button {
+  float: right;
+}
+
+#nav .dt_title .dd {
+  display: block;
+}
+
+#nav_w {
+  background-color: #000;
+}
+
+#slider_w, #slider_w .slider, .slider li {
+  width: 100%;
+  height: 480px;
+  position: relative;
+}
+
+#slider_w .slider, .slider li .slider {
+  overflow: hidden;
+}
+
+.slider li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.slider li a {
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slider li img {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  height: 480px;
+}
+
+.pages {
+  width: 90px;
+  height: 20px;
+  position: absolute;
+  top: 430px;
+  left: 650px;
+}
+
+.pages li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000000;
+  margin-right: 10px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  text-align: center;
+  line-height: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pages li:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.main_w {
+  width: 100%;
+  height: auto;
+  background: #f9f9f9;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.main {
+  height: auto;
+  padding-top: 90px;
+}
+
+.main_tit {
+  width: 430px;
+  height: 1px;
+  background: #676767;
+  position: relative;
+  margin: 0 auto;
+}
+
+.main h2 {
+  font-weight: 400;
+  padding-bottom: 14px;
+  position: relative;
+  padding-top: 34px;
+  font-size: 16px;
+  margin-left: 11px;
+}
+
+.main_tit p {
+  font-size: 30px;
+  position: absolute;
+  top: -20px;
+  left: 130px;
+  padding: 0 10px;
+  background: #f9f9f9;
+}
+
+.must {
+  width: 1220px;
+  height: 380px;
+  margin-left: -20px;
+}
+
+.must_tit_img, .new_tit_img, .worth_tit_img, .sale_tit_img {
+  display: inline-block;
+  width: 32px;
+  height: 38px;
+  vertical-align: middle;
+  line-height: 32px;
+  margin-right: 10px;
+}
+
+.must_tit_img, .new_tit_img, .worth_tit_img, .sale_tit_img {
+  background: url(../img/ico-title.png) no-repeat;
+}
+
+.tit_dd {
+  font-size: 14px;
+  padding-left: 28px;
+}
+
+.must_con li {
+  width: 590px;
+  height: 280px;
+  margin-left: 20px;
+}
+
+.must_con li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.main li:hover {
+  box-shadow: 0 0 3px #999;
+}
+
+.today_new {
+  width: 100%;
+  height: 734px;
+}
+
+.change {
+  display: block;
+  width: 80px;
+  height: 29px;
+  background: #E14958;
+  color: #fff;
+  font-size: 14px;
+  line-height: 29px;
+  margin-right: 30px;
+  padding-left: 10px;
+}
+
+.change:hover {
+  text-decoration: underline;
+}
+
+.change .change_new {
+  display: inline-block;
+  width: 23px;
+  height: 18px;
+  background: url(../img/ico.png) no-repeat 0 -136px;
+  vertical-align: middle;
+}
+
+.new_tit_img {
+  background: url(../img/ico-title.png) no-repeat 0 -39px;
+}
+
+.new_cont {
+  width: 100%;
+  height: 660px;
+}
+
+.new_cont .new_t {
+  width: 1220px;
+  height: 380px;
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+
+.new_cont .new_t li {
+  width: 283px;
+  height: 378px;
+  margin-left: 20px;
+  border: 1px solid #e5e5e5;
+}
+
+.new_t li .new_img {
+  display: block;
+  width: 283px;
+  height: 268px;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.option {
+  width: 100%;
+  height: 30px;
+  background: #6A4084;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+  display: none;
+}
+
+.option .add_cart {
+  display: inline-block;
+  width: 18px;
+  height: 16px;
+  margin: -5px 0 0 7px;
+  background: url(../img/ico.png) no-repeat 0 -88px;
+}
+
+.new_t .data .price {
+  width: 231px;
+  height: 30px;
+  padding-bottom: 8px;
+}
+
+.data .price i {
+  color: #E14958;
+}
+
+.data .price .now_pri {
+  padding-right: 4px;
+  font-size: 20px;
+  color: #e14958;
+}
+
+.data .price .now_pri i {
+  font-size: 12px;
+}
+
+.data .price .old_pri {
+  text-decoration: line-through;
+}
+
+.data .price .collect {
+  line-height: 30px;
+}
+
+.data .dec {
+  width: 231px;
+  height: 36px;
+  line-height: 18px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.data .dec a:hover {
+  text-decoration: underline;
+}
+
+.data .dec .discount {
+  color: #E14958;
+}
+
+.new_b {
+  width: 1220px;
+  height: 240px;
+  margin-left: -20px;
+}
+
+.new_b li {
+  width: 587px;
+  height: 238px;
+  border: 1px solid #e5e5e5;
+  margin-left: 20px;
+}
+
+.new_b .new_img {
+  width: 283px;
+  height: 238px;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  display: block;
+}
+
+.new_b .data {
+  width: 230px;
+  height: 74px;
+  padding: 80px 24px 0 50px;
+}
+
+.worth {
+  width: 100%;
+  height: 356px;
+  margin-bottom: 40px;
+}
+
+.worth_tit_img {
+  background: url(../img/ico-title.png) no-repeat 0 -78px;
+}
+
+.main h3 {
+  width: 1164px;
+  height: 36px;
+  padding-left: 36px;
+  line-height: 36px;
+  font-size: 16px;
+}
+
+.main h3 span {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  background: url(../img/ico-title-1.png);
+  margin-right: 4px;
+}
+
+.worth_cont {
+  width: 1200px;
+  height: 140px;
+  padding: 42px 0 52px 0;
+  margin-bottom: 42px;
+  background: #fff;
+}
+
+.worth_cont ul {
+  width: 1170px;
+  height: 140px;
+  padding-left: 30px;
+}
+
+.worth_cont ul li {
+  margin: 0 10px;
+}
+
+.good {
+  width: 1200px;
+  height: 1041px;
+  background: #fff;
+  margin-bottom: 40px;
+}
+
+.good_tab {
+  width: 1164px;
+  height: 30px;
+  padding-top: 42px;
+  border-bottom: solid 1px #e5e5e5;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 36px;
+  margin-bottom: 40px;
+}
+
+.good_tab li {
+  margin-right: 10px;
+  padding: 0 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #E5E5E5;
+  border-bottom: none;
+}
+
+.good_tab li:hover {
+  box-shadow: none;
+}
+
+.current {
+  background: #E14958;
+  color: #fff;
+}
+
+.good_list {
+  width: 1233px;
+  height: 928px;
+  margin-left: -33px;
+  position: relative;
+}
+
+.good_list .data {
+  padding-left: 10px;
+}
+
+.good_list li {
+  width: 280px;
+  height: 422px;
+  margin-left: 100px;
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #fff;
+}
+
+.good_list li .good_img {
+  display: block;
+  width: 280px;
+  height: 280px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.good_list .dec {
+  margin: 10px 0;
+}
+
+.comment {
+  width: 258px;
+  height: 40px;
+  background: #fffcdb;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+.comment .face {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: url(../img/test-img/1440241542581.jpg);
+  background-size: cover;
+}
+
+.comment .com_text {
+  width: 180px;
+  height: 60px;
+}
+
+.comment .com_text p {
+  width: 190px;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.comment span {
+  clear: both;
+}
+
+.buy_again {
+  width: 1200px;
+  height: 470px;
+  padding-left: 10px;
+  margin-bottom: 40px;
+  background: #fff;
+}
+
+.buy_again dl {
+  width: 394px;
+  height: 470px;
+}
+
+.buy_again dl dt {
+  width: 394px;
+  height: 46px;
+  text-align: center;
+  line-height: 47px;
+  color: #E14958;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.buy_again dl .tag {
+  display: block;
+  width: 70px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #E14958;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.buy_again dl .gray {
+  background-color: #c6c6c6;
+}
+
+.buy_again dl .first {
+  width: 354px;
+  height: 166px;
+  padding: 38px 20px 10px;
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+.buy_again dl .first .buy_img {
+  display: block;
+  width: 166px;
+  height: 166px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.first .data {
+  width: 178px;
+  height: 134px;
+  padding-left: 10px;
+  overflow: hidden;
+}
+
+.first .data .title {
+  width: 178px;
+  height: 56px;
+  line-height: 18px;
+}
+
+.data a:hover {
+  text-decoration: underline;
+}
+
+.data_more {
+  width: 178px;
+  height: 78px;
+  line-height: 18px;
+}
+
+.data_more .price {
+  margin: 10px 0;
+}
+
+.data_more .state {
+  color: #999;
+}
+
+.data_more .state a {
+  color: #999;
+}
+
+.buy_again dl .ex_first {
+  width: 314px;
+  height: 52px;
+  position: relative;
+  border-bottom: 1px solid #eee;
+  padding-left: 80px;
+}
+
+.buy_again dl .ex_first .buy_img {
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.buy_again dl .ex_first .data {
+  width: 224px;
+  height: 45px;
+  padding-left: 10px;
+  overflow: hidden;
+}
+
+.ex_first .data .title {
+  width: 224px;
+  height: 45px;
+  line-height: 45px;
+}
+
+.newest {
+  width: 1200px;
+  height: 900px;
+  padding-top: 42px;
+  margin-bottom: 50px;
+  background-color: #fff;
+}
+
+.sign {
+  position: absolute;
+  top: -1px;
+  right: 10px;
+}
+
+.sale {
+  width: 1200px;
+  height: auto;
+}
+
+.cover_img {
+  background-position: center center;
+  background-size: cover;
+}
+
+.sale_tit_img {
+  background: url(../img/ico-title.png) no-repeat 0 -117px;
+}
+
+.sale_box {
+  width: 1200px;
+  height: 1232px;
+}
+
+.sale_list {
+  width: 786px;
+  height: auto;
+}
+
+.sale_list li {
+  width: 786px;
+  height: 282px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.sale_list li .sale_img {
+  display: block;
+  width: 492px;
+  height: 280px;
+}
+
+.sale_img .cover_img {
+  margin: 0 auto;
+  width: 280px;
+  height: 280px;
+}
+
+.sale_list li .data {
+  width: 240px;
+  height: 268px;
+  padding: 0 26px;
+}
+
+.sale_list .title {
+  width: 240px;
+  height: 34px;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+.sale_list .title .discount {
+  color: #E14958;
+}
+
+.data .timeout {
+  width: 194px;
+  height: 26px;
+  background-color: #000;
+  text-align: center;
+  margin: 0 auto 20px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.sale_list .panic {
+  width: 240px;
+  height: 62px;
+  overflow: hidden;
+}
+
+.panic .btn_buy {
+  display: block;
+  width: 140px;
+  height: 38px;
+  margin-top: 24px;
+  background-color: #E14958;
+  line-height: 38px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+
+.sale_list .more {
+  width: 784px;
+  height: 26px;
+  border: 1px solid #e0e0e0;
+  background-color: #f3f3f3;
+  line-height: 26px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.panic .info {
+  display: inline-block;
+  padding: 40px 0 0 16px;
+}
+
+.data .intro {
+  width: 240px;
+  height: 70px;
+  margin: 4px 0 20px 0;
+  overflow: hidden;
+  line-height: 18px;
+  color: #999;
+}
+
+.sale_tommrow {
+  width: 386px;
+  height: 1146px;
+}
+
+.sale_tommrow .tommrow_title {
+  width: 386px;
+  height: 48px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.tommrow_title .tom_tit_tip {
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.sale_tommrow ul {
+  width: 386px;
+  height: 1060px;
+  overflow: hidden;
+}
+
+.sale_tommrow li {
+  width: 386px;
+  height: 193px;
+  margin-bottom: 19px;
+  background-color: #fff;
+}
+
+.sale_tommrow .cover_img {
+  width: 236px;
+  height: 193px;
+}
+
+.sale_tommrow .data {
+  width: 122px;
+  height: 170px;
+  overflow: hidden;
+  padding: 18px 13px 0;
+  line-height: 14px;
+}
+
+.sale_tommrow .title {
+  width: 122px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.sale_tommrow .data .intro {
+  width: 122px;
+  height: 70px;
+  color: #888;
+  margin: 4px 0 20px;
+  overflow: hidden;
+  line-height: 18px;
+}
+
+.sale_tommrow .panic {
+  width: 122px;
+  height: 20px;
+}
+
+.sale_tommrow .panic a {
+  display: inline-block;
+  line-height: 15px;
+}
+
+.sale_tommrow .panic a span {
+  display: inline-block;
+  width: 18px;
+  height: 15px;
+  background: url(../img/ico.png) -23px 0px;
+}
+
+.sale_tommrow .panic button {
+  width: 75px;
+  height: 20px;
+  background-color: #E14958;
+  color: #fff;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.scroll {
+  width: 140px;
+  height: 18px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.scrollup, .scrolldown {
+  cursor: pointer;
+  vertical-align: middle;
+  display: inline-block;
+  width: 20px;
+  height: 16px;
+  background: url(../img/ico_arrow.png) no-repeat -29px -2px;
+  margin-left: 50px;
+}
+
+.scrolldown {
+  background: url(../img/ico_arrow.png) 0 -2px;
+  margin-left: 20px;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+//引入公共部分
+@import "base/mixins";
+
+//首页导航列表显示
+#nav .dt_title .dd{
+    display: block;
+}
+#nav_w{
+    background-color: #000;
+}
+//轮播图
+@import "layout/slider";
+
+//网页主要内容
+@import "layout/main";
+

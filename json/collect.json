@@ -1,0 +1,34 @@
+{
+    "data": [{
+        "t": "BB 粉色美白牛奶 沐浴乳(350ml)",
+        "newpri": "85.00",
+        "oldpri": "￥118.00",
+        "img": "url(img/test-img/14259752358772.jpg)",
+        "sid": "1"
+
+    }, {
+        "t": "[美国Kiehls]科颜氏多重紧致修颜面霜(3ml*7)",
+        "newpri": "45.00",
+        "oldpri": "￥59.00",
+        "img": "url(img/test-img/goods.jpg)",
+        "sid": "2"
+    }, {
+        "t": "[韩国 · 毛孔清洁去污克星] 兰芝 毛孔清洁多效洗面奶(180ml 蓝色)",
+        "newpri": "89.00",
+        "oldpri": "￥199.00",
+        "img": "url(img/test-img/FA163E0C4D3EGA9B19X1916JW5X.jpg)",
+        "sid": "3"
+    }, {
+        "t": "韩范秋装新款下摆系带长款毛衣针织开衫外套米色(F)",
+        "newpri": "89.00",
+        "oldpri": "￥199.00",
+        "img": "url(img/test-img/FA163E0C4D3EG99F2BC1BHG06IP.jpg)",
+        "sid": "4"
+    },{
+    	"t": "水库凝肌保湿爽肤水 滋润型新款(200ml)",
+        "newpri": "149.00",
+        "oldpri": "￥225.00",
+        "img": "url(img/test-img/new1.jpg)",
+        "sid": "5"
+    }]
+}

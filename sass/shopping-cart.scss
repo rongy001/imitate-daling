@@ -1,0 +1,361 @@
+@charset "utf-8";
+
+@import "base/mixins";
+
+#header_w{
+    margin-bottom: 30px;
+}
+#header{
+    width: 1020px;
+}
+.da_cart{
+    width:1020px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.cart_top{
+    @include elesize($wid:1020px,$hei:50px);
+    @extend %centerEle;
+}
+ .logo a {
+    display: block;
+    @include elesize($wid:280px,$hei:40px);
+    @extend %fl;
+    background: url(../img/logo.png);
+    text-indent: -999999px;
+}
+.cart_step{
+   @include elesize($wid:615px,$hei:38px);
+   @extend %fr; 
+   border: 1px solid #e5e5e5;
+   margin-top: 10px;
+   overflow: hidden;
+}
+.cart_step ul li{
+   @extend %fl; 
+   @include elesize($wid:205px,$hei:40px);
+   line-height: 40px;
+   font-size: 14px;
+   position: relative;
+   color:#cacaca;
+}
+.cart_step .cart1{
+    color:#fff;
+    background-color:#F25E5A ;
+    top:-1px;
+    left:-1px;
+}
+.cart_step ul .cart1 .triangle{
+   @include triangle($top:20px,$bottom:20px,$right:11px,$left:11px,$c:#f25e5a,$direction:right); 
+   position: absolute;
+   right:-22px;
+}
+.icon-number{
+    display: inline-block;
+    @include elesize($wid:20px,$hei:20px);
+    border-radius: 50%;
+    margin: 0 10px 0 52px;
+    background-color: #cacaca;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 20px;
+    color:#fff;
+}
+.cart_step .cart1 .icon-number{
+    @extend .icon-number;
+    background-color:#fff ;
+    color:#F25E5A;
+}
+.icon-to{
+    @include elesize($wid:7px,$hei:21px);
+    vertical-align: middle;
+    display: inline-block;
+    background: url(../img/ico_arrow.png) -64px -85px no-repeat;
+    position: absolute;
+    right: 0 ;
+    top:10px;
+}
+.cart_tab{
+    @include elesize($wid:1020px,$hei:auto);
+    overflow: hidden;
+    padding-top:60px;
+}
+.cart_header{
+    @include elesize($wid:1018px,$hei:38px);
+    border: 1px solid #ccc;
+    line-height: 38px;
+}
+.cart_header ul{
+    @include elesize($wid:1018px,$hei:38px);
+}
+.cart_header ul li{
+    @extend %fl;
+    text-align: center;
+    line-height: 38px;
+}
+.cart_header ul .th-check{
+    width:100px;
+    text-align: left;
+}
+.th-name{
+    width:440px;
+}
+.th-price{
+    width:120px;
+}
+.th-number{
+    width:116px;
+}
+.th-total{
+    width: 128px;
+}
+.th-handle{
+    width: 114px;
+}
+.cart-empty{
+    width:369px;
+    height:160px;
+    margin: 0 auto 50px;
+//  display:none;
+}
+.cart-empty-bg{
+    padding-top:50px;
+    @include elesize($wid:369px,$hei:116px);
+}
+.cart-empty-bg strong{
+    display: block;
+    @include elesize($wid:80px,$hei:71px);
+    @extend %fl;
+    margin-right: 30px;
+    background: url(../img/ico-cart-empty.png) no-repeat;
+}
+.cart-empty-bg span{
+    line-height: 18px;
+    font-size: 14px;
+}
+.cart-empty-bg span a:hover{
+    color:#F25E5A;
+    text-decoration: underline;
+}
+.cart_list{
+    @include elesize($wid:1018px,$hei:auto);
+    overflow: hidden;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #e5e5e5;
+
+}
+.goods-header{
+    @include elesize($wid:1000px,$hei:40px);
+    border-bottom:1px solid #e5e5e5;
+    padding-left:18px;
+    line-height: 41px;
+    display: none;
+}
+.ico-active{
+    display: inline-block;
+    padding:0 4px;
+    margin: 0 12px 0 20px;
+    background-color:#c24259;
+    color:#fff;
+}
+.goods{
+    @include elesize($wid:1018px,$hei:100px);
+    display: none;
+    @include clearfix;
+    overflow: hidden;
+}
+.goods li{
+    padding-top:20px;
+    @extend %fl;
+    @include clearfix;
+}
+
+.td-check{
+    width:52px;
+}
+.td-goods{
+    width:486px;
+}
+.cover_img{
+    background-position: center center;
+    background-size: cover;
+}
+.td-goods .cover_img{
+    @include elesize($wid:78px,$hei:78px);
+    @extend %fl;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+}
+.td-goods .name{
+    line-height: 18px;
+}
+.td-price{
+    width:120px;
+    text-align: center;
+}
+.td-price .price{
+    font-size: 18px;
+}
+.td-number{
+    width:118px;
+}
+.td-number div{
+    width:98px;
+    height:30px;
+    margin: 0 auto;
+}
+.reduce{
+    display: block;
+    @include elesize($wid:28px,$hei:28px);
+    @extend %fl;
+    border: 1px solid #e5e5e5;
+    border-right: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 28px;
+}
+.td-number input{
+    @include elesize($wid:38px,$hei:28px);
+    border:1px solid #E5E5E5;
+    padding: 0;
+    text-align: center;
+    outline: none;
+    @extend %fl;
+}
+.add{
+    @extend .reduce;
+    border-left: none;
+    border-right: 1px solid #E5E5E5;
+}
+.td-total{
+    width:128px;
+    text-align: center;
+    color:#E14958;
+}
+.td-total .total{
+    font-size: 16px;
+}
+.td-handle{
+    width:114px;
+    text-align: center;
+}
+.total-box{
+    @include elesize($wid:1018px,$hei:58px);
+    border:1px solid #ccc;
+    background-color:#f2f2f2;
+    margin-top: 20px;
+}
+.sel-all{
+    width:100px;
+    @extend %fl;
+    padding-top:20px;
+}
+.sel-all input{
+    vertical-align: middle;
+}
+.option{
+    @extend %fl;
+    padding-top: 22px;
+}
+.option a{
+    margin-right: 40px;
+}
+.option a:hover{
+    text-decoration: underline;
+}
+.btn-count{
+    display: block;
+    @extend %fr;
+    @include elesize($wid:120px,$hei:60px);
+    background-color:#F25E5A ;
+    font-size: 18px;
+    line-height: 60px;
+    color:#fff;
+    text-align: center;
+    margin-top: -1px;
+}
+.total-count{
+    @extend %fr;
+    padding:10px 18px 0 0;
+    line-height: 30px;
+}
+.red{
+    color:#F25E5A;
+}
+.all-total{
+    font-size: 18px;
+}
+.ammount{
+    @extend %fr;
+    padding:12px 32px 0 0;
+    margin-right: 150px;
+    line-height: 30px;
+}
+.cart-collect{
+    @include elesize($wid:1000px,$hei:300px);
+    padding:46px 0 0 20px;
+}
+.cart-collect .title{
+    @include elesize($wid:142px,$hei:7px);
+    margin: 0 auto;
+    border-top:1px dotted #ccc;
+}
+.cart-collect .title p{
+    background-color: #fff;
+    width:80px;
+    text-align: center;
+    margin: -8px auto 0;
+}
+.c-box{
+    @include elesize($wid:1000px,$hei:266px);
+    padding:26px 24px 0;
+    margin:  0 auto;
+}
+.c-box ul{
+    @include elesize($wid:1000px,$hei:266px);
+}
+.c-box ul li{
+    width:146px;
+    padding:19px 16px;
+    border:1px solid #fff;
+    @extend %fl;
+    margin-right: 15px;
+}
+.c-box ul li:hover{
+    border:1px solid #666;
+}
+.c-box ul li .cover_img{
+    @include elesize($wid:140px,$hei:140px);
+    margin:  o auto 4px; 
+}
+.c-box ul li .old-price{
+    text-decoration: line-through;
+}
+.c-box ul li p{
+    @include elesize($wid:146px,$hei:16px);
+    line-height: 16px;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+.c-box .btn-cart{
+    display: block;
+    @include elesize($wid:100px,$hei:30px);
+    background-color:#E14958 ;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color:#fff;
+    margin: 20px auto 0;
+}
+.assure ul li span{
+    background: url(../img/ico-assure.png);
+}
+.assure ul .reson .ico_arrow{
+    background: url(../img/ico_arrow.png) no-repeat -2px -135px;
+}
+.identity li a{
+    background: url(../img/cert.png) no-repeat;
+}

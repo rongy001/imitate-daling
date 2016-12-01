@@ -1,0 +1,44 @@
+#slider_w{
+    @include elesize($wid:100%,$hei:480px);
+    position: relative;
+}
+#slider_w .slider{
+    @extend #slider_w;
+    overflow: hidden;
+}
+.slider li{
+    @extend #slider_w;
+    @include elePos($left:0,$top:0);
+    @extend %fl;
+    display: none;
+}
+.slider li a{
+    max-width: 1200px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.slider li img{
+    width:100%;
+    margin: 0 auto;
+    display: block;
+    height: 480px;
+}
+.pages {
+    @include elesize($wid:90px,$hei:20px);
+    @include elePos($left:650px,$top:430px);
+}
+.pages li{
+    @extend %fl;
+    @include elesize($wid:20px,$hei:20px);
+    border-radius:50%;
+    background: #000000;
+    margin-right: 10px;
+    @include opacity(0.5);
+    text-align: center;
+    line-height: 20px;
+    color:#fff;
+    cursor: pointer;
+}
+.pages li:hover{
+    @include opacity(1);
+}

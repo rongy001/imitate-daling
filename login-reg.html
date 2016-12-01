@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" href="css/base/base.css" />
+		<link rel="stylesheet" href="css/login.css" />
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script src="js/login-reg.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="login_header">
+			<h1>
+				<a href="index.html">达令,一手全球好货</a>
+			</h1>
+		</div>
+		<div class="login_bg">
+			<div class="login_main">
+				<div class="login_reg">
+					<h2>达令会员</h2>
+					<div class="login_tabs">
+						<a href="javascript:;" class="active">登录</a>
+						<a href="javascript:;">注册</a>
+					</div>
+					<form class="login_form" method="post">
+						<div class="ctrl">
+							<span class="login_sign">
+								<span class="icon_user"></span>
+							</span>
+						<input type="text" name="mobile" class="mobile" id="login_mob" placeholder="请输入您的手机号码"/>
+						</div>
+						<div class="ctrl password">
+							<span class="login_sign">
+								<span class="icon_password"></span>
+							</span>
+						<input type="password" name="password" class="password" id="login_psd" placeholder="请输入密码"/>
+						</div> 
+						<a href="javascript:;" class="forgot">忘记密码？</a>
+						<p style="color: #a00;display: none;">*你输入的密码和账户名不匹配</p>
+						<input type="button" value="登录" class="submit_btn" id="login">
+					</form>
+					<form class="reg_form" method="post">
+						<div class="ctrl">
+							<span class="login_sign">
+								<span class="icon_user"></span>
+							</span>
+						<input type="text" name="mobile" class="mobile" id="reg_mob" placeholder="请输入您的手机号码"/>
+						<div class="error" id="mobile-error">
+							请输入正确的手机号码
+							<span></span>
+						</div>
+						</div>
+						<div class="ctrl">
+							<span class="login_sign">
+								<span class="icon_password"></span>
+							</span>
+						<input type="text" name="validate" class="verify" placeholder="请输入验证码"/>
+						<div class="error" id="verify-error">
+							验证码错误
+							<span></span>
+						</div>
+						<img src="" alt="" class="captcha"/>
+						</div>
+						<div class="ctrl password">
+							<span class="login_sign">
+								<span class="icon_password"></span>
+							</span>
+							<input type="password" name="password" id="reg_psd" placeholder="请输入密码"/>
+							<div class="error" id="psd-error">
+								密码格式错误
+								<span></span>
+							</div>
+						</div>
+						<div class="agreement">
+							<label for="checkbox">
+								<input type="checkbox" id="checkbox"  checked/>我已阅读并同意
+								<a href="javascript:;">《达令用户注册协议》</a>
+							</label>
+						</div>
+						<input type="button" value="注册" class="submit_btn" id="register">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,342 @@
+@charset "utf-8";
+/**侧边栏**/
+.sidebar{
+    @include elesize($wid:320px,$hei:100%);
+    position: fixed;
+    right:-280px;
+//  right:0;
+    top:0;  
+}
+.sidebar_function{
+    @include elesize($wid:40px,$hei:100%);
+    background-color: #333;
+    color:#fff;
+    @extend %fl;
+    position: relative;
+}
+.sb_cart{
+    @include elesize($wid:100%,$hei:126px); 
+    margin: 110px 0 22px 0;
+    padding-bottom: 10px;
+    position: relative;
+    cursor:pointer;
+} 
+.cut-line{
+    @include elesize($wid:22px,$hei:1px);
+    background-color: #515151;
+    overflow: hidden;
+    margin: 0 0 14px 9px;
+}
+.sb_cart i{
+    display: block;
+    @include elesize($wid:33px,$hei:26px);
+    margin-bottom: 10px;
+    background:url(../../img/ico_sidebar.png) -26px top;
+}
+.sb_cart .name{
+    text-align: center;
+    line-height: 16px;
+    margin-bottom: 7px;
+}
+.sb_cart .cart_num{
+    display: block;
+    @include elesize($wid:20px,$hei:20px);
+    background-color: #E14958;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    margin:0 auto;
+}
+.sb_promo{
+    @include elesize($wid:40px,$hei:39px);
+    padding-top: 7px;
+    position: relative;
+    cursor: pointer;
+}
+.sb_promo i{
+    display: block;
+    @include elesize($wid:32px,$hei:32px);
+    margin-bottom: 10px;
+    background: url(../../img/ico_sidebar.png) 6px top;
+}
+.sidebar .item{
+    @include elesize($wid:100px,$hei:42px);
+    background-color: #666;
+    position: absolute;
+    top:0;
+    right:40px;
+    text-align: center;
+    line-height: 42px;
+    display: none;
+}
+.sidebar .item span{
+    @include triangle($c:#666,$direction:right);
+    position: absolute;
+    top:15px;
+    right:-10px;
+}
+.sb_collect{
+    @extend .sb_promo;
+}
+.sb_collect i{
+    background: url(../../img/ico_sidebar.png) -60px top;
+}
+.qrcode{
+    background: url(../../img/ico-qrcode.png) no-repeat;
+    @include elesize($wid:22px,$hei:22px);
+    position: absolute;
+    bottom: 58px;
+    left: 9px;
+}
+.qrcode_pop{
+    @include elesize($wid:109px,$hei:138px);
+    border: 1px solid #e5e5e5;
+    border-right: none 0;
+    left: -119px;
+    bottom: -8px;
+    text-align: center;
+    color: #000;
+    position: absolute;
+    background: #fff;
+}
+.qrcode_pop span{
+    @include triangle($c:#fff,$direction:right);
+    position: absolute;
+    right:-10px;
+    bottom:14px;
+}
+.qrcode_img{
+    @include elesize($wid:91px,$hei:91px);
+    margin: 10px 9px;
+    background: url(../../img/cod_da.png);
+}
+.go_top{
+    @include elesize($wid:30px,$hei:30px);
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.go_top img{
+    @include elesize($wid:50px,$hei:50px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+.sidebar_data{
+    @include elesize($wid:280px,$hei:100%);
+    overflow: hidden;
+    position: relative;
+}
+.sb_show{
+    display: none;
+}
+
+//购物车
+.cart_mini{
+    @include elesize($wid:280px,$hei:100%); 
+    overflow: hidden;
+    background-color: #f4f4f4;
+    display: block;
+}
+.close{
+    @include elesize($wid:16px,$hei:16px);
+    background: url(../../img/login-close.png);
+    position: absolute;
+    right:10px;
+    top:10px;
+}
+.sb_header{
+    @include elesize($wid:280px,$hei:50px);
+    line-height: 50px;
+    text-align: center;
+}
+.cart_table{
+    @include elesize($wid:280px,$hei:100%);
+    background: url(../../img/cart_mini_empty.png) no-repeat center 46px;
+}
+
+.thead{
+    @include elesize($wid:250px,$hei:24px);
+    padding:0 15px;
+    line-height: 24px;
+    background-color:#fff;
+    margin-bottom: 10px;
+    display: none;
+}
+.thead .bg-red{
+    padding:0 5px;
+    background-color: #C24259;
+    color:#fff;
+}
+.cart_table .goods{
+    @include elesize($wid:233px,$hei:58px);
+    margin: 0 15px 10px;
+    position: relative;
+    padding:0;
+    overflow: hidden;
+    @include clearfix;
+    display: none;
+}
+.cart_table .goods li{
+    @extend %fl;
+}
+.cart_table .cart_table .goods .td-goods{
+    @include elesize($wid:185px,$hei:58px);
+}
+.cart_table .goods .td-goods .cover{
+    @extend %fl;
+}
+.cart_table .goods .td-goods .cover .cover_img{
+    @include elesize($wid:56px,$hei:56px);
+    margin-right: 10px;
+    @extend %fl;
+    border:1px solid #dbdbdb;
+}
+.cart_table .goods .td-goods .name{
+    line-height: 18px;
+    display: block;
+    @extend %fl;
+    width:100px;
+    height:40px;
+    overflow: hidden;
+}
+.cart_table .goods .td-number{
+   @include elesize($wid:65px,$hei:20px); 
+   position: absolute;
+   left: 69px;
+   top:36px;
+}
+.cart_table .goods .td-price{
+    display: none;
+}
+.cart_table .reduce{
+    display: block;
+    @include elesize($wid:20px,$hei:20px);
+    @extend %fl;
+    border: 1px solid #e5e5e5;
+    border-right: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+}
+.cart_table .td-number input{
+    @include elesize($wid:20px,$hei:20px);
+    border:1px solid #E5E5E5;
+    padding: 0;
+    text-align: center;
+    outline: none;
+    @extend %fl;
+}
+.cart_table .add{
+    @extend .reduce;
+    border-left: none;
+    border-right: 1px solid #E5E5E5;
+}
+.cart_table .td-total{
+    position: absolute;
+    top:6px;
+    right:0;
+    color:#E14958;
+}
+.cart_table .td-handle{
+    position: absolute;
+    top:25px;
+    right:0;
+}
+.cart_table .td-handle:hover{
+    text-decoration: none;
+}
+.sidebar_promo{
+    @include elesize($wid:260px,$hei:100%);
+    padding-left:20px;
+    background-color: #474747;
+    color:#e2e2e2;
+}
+.sidebar_promo .sb_header{
+    margin-left: -20px;
+}
+.unlogin{
+    @include elesize($wid:280px,$hei:100%);
+    margin-left: -20px;
+    color:#fff;
+    text-align: center;
+    display: none;
+}
+.unlogin p{
+    @include elesize($wid:280px,$hei:32px);
+    line-height: 32px;
+    padding-top:200px; 
+}
+.unlogin a{
+    display: block;
+    @include elesize($wid:180px,$hei:30px);
+    border:none;
+    background-color: #E14958;
+    line-height: 30px;
+    color:#fff;
+    margin: 0 auto;
+}
+.sidebar_collect{
+    @extend .sidebar_promo;
+}
+.promo_main{
+    @extend .unlogin;
+    display: block;
+    color:#e2e2e2;
+    text-align: center;
+}
+.promo_info{
+   @include elesize($wid:241px,$hei:80px); 
+   margin: 0 auto;
+}
+.promo_info_data{
+    @extend %fl;
+    @include elesize($wid:120px,$hei:44px);
+    padding: 16px 0;
+    background-color:#505050 ;
+    line-height: 16px;
+}
+.promo_info1{
+    border-right: 1px solid #ccc;
+}
+.promo_info1 span{
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.promo_main ul{
+    border: 1px solid #ededed;
+    margin: 40px auto 20px;
+    width: 236px;
+    height:28px;
+}
+.promo_main ul li{
+    float: left;
+    border-right: solid 1px #ededed;
+    width: 78px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    cursor: pointer;
+}
+.promo_main ul .active{
+    background-color:#fff ;
+    color:#000;
+}
+.promo_main .tab_old{
+    border-right: none;
+}
+.promo_main p{
+    padding: 0;
+}
+
+.log_coll{
+    @include elesize($wid:220px,$hei:78px);
+    margin: 40px auto 20px;
+    line-height: 18px;
+    text-align: center;
+    color:#000;
+}

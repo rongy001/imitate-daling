@@ -1,0 +1,166 @@
+/*nav_S*/
+#nav_wrap{
+    width:100%;
+    background: #000;
+}
+#nav{
+    @extend %centerEle;
+    height:30px;
+}
+#nav .dt_title{
+    @include elesize($wid:220px,$hei:30px);
+    @extend %fl;
+    background: #6A4084;
+    position: relative;
+}
+#nav .dt_title p{
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    color:#fff;
+    cursor:pointer;
+}
+#nav .dt_title p span{
+    display: inline-block;
+    @include elesize($wid:11px,$hei:7px);
+    margin-left:14px;
+    vertical-align: middle;
+}
+#nav .dt_title .ico_up{
+    background: url(../../img/ico_arrow.png) -25px -120px no-repeat;
+}
+#nav .dt_title .ico_down{
+    background: url(../../img/ico_arrow.png) -5px -120px no-repeat;
+    display: none;
+}
+#nav .navigation{
+    padding-left: 30px;
+    @include elesize($wid:950px,$hei:30px);
+    @extend %fl;
+}
+#nav .navigation ul li{
+    @extend %fl;
+    font-size: 16px;
+    line-height: 30px;
+    padding:0 10px;
+    margin-right: 30px;
+}
+#nav .navigation ul a{
+    color:#fff;
+}
+#nav .navigation ul a:hover{
+    color:#999;
+}
+.dd{
+    @include elesize($wid:220px,$hei:479px);
+    background: #e8e3eb;
+    @include elePos($top:30px,$left:0);
+    display: none;
+    z-index: 2;
+}
+#nav .dd dl{
+    @include elesize($wid:178px,$hei:93px);
+    padding: 25px 20px 0;
+    border: 1px solid #e8e3eb;
+    cursor:pointer;
+}
+#nav dl dt{
+    @include elesize($wid:178px,$hei:17px);
+    font-size: 14px;
+    line-height: 16px;
+    padding-bottom: 16px;
+}
+#nav dl dt span{
+    @include elesize($wid:auto,$hei:auto);
+}
+#nav dl .category-sort{
+    @include elesize($wid:164px,$hei:43px);
+    position: relative;
+    padding-right: 12px;
+    padding-bottom: 14px;
+    border-bottom: 1px dotted #d9d9d9;
+    line-height: 22px;
+}
+#nav .category-sort span{
+    display: block;
+    @include triangle($top:2px,$bottom:2px,$right:4px,$left:4px,$c:#9e9e9e,$direction:right);
+    @include elePos($top:22px,$left:164px);
+}
+#nav .category-sort .sort-con{
+    @include elesize($wid:168px,$hei:44px);
+}
+#nav .category-sort a{
+    margin-right: 6px;
+    white-space: nowrap;
+}
+#nav .category-sort a:hover{
+    color:#E34755;
+    text-decoration: underline;
+}
+#nav .category-drop{
+    @include elesize($wid:600px,$hei:auto);
+    padding:20px 40px 15px;
+    border: 1px solid #6A4084;
+    background: #fff;
+    @include elePos($left:220px,$top:0);
+    z-index: -1;
+}
+.hot_brand{
+    height:110px;
+    padding-bottom: 40px;
+}
+.brand_tit {
+    font-size: 16px;
+    height:40px;
+    line-height: 40px;
+}
+.hot_brand ul {
+    @include elesize($wid:613px,$hei:70px); 
+    margin-left: -13px;
+}
+.hot_brand ul li{
+    @extend %fl;
+    @include elesize($wid:140px,$hei:70px);
+    margin-left: 13px;
+}
+.category-data{
+    height:270px;
+}
+.brand-ad{
+    @extend %fr;
+    @include elesize($wid:293px,$hei:270px);
+}
+.category-data-1{
+    @extend %fl;
+    @include elesize($wid:307px,$hei:auto);
+}
+.category-data-2{
+    width:307px;
+    margin-bottom: 20px;
+}
+.category-data-2 .item{
+    @extend %fl;
+    @include elesize($wid:80px,$hei:22px);
+    line-height: 22px;
+    font-weight: 700;
+}
+.category-data-2 .data{
+    width:208px;
+    line-height: 22px;
+    overflow: hidden;
+}
+.category-data-2 .data a{
+    margin-right: 20px;
+    white-space: nowrap;
+}
+.category-data-2 .data a:hover{
+    color:#E14958;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+

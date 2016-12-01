@@ -1,0 +1,7 @@
+@mixin omit($wid,$hei){
+    width:$wid;
+    height: $hei;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

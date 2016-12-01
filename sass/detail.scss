@@ -1,0 +1,438 @@
+@charset "utf-8";
+
+@import "base/mixins";
+
+#nav_w{
+    width:100%;
+    background-color:#000000 ;
+}
+.detail{
+    @extend %centerEle;
+    height:auto;
+    overflow: hidden;
+}
+.detail_link{
+    @include elesize($wid:100%,$hei:40px);
+    margin: 10px 0;
+    border-bottom: 1px solid #E5E5E5;
+    border-top: 1px solid #E5E5E5;
+    line-height: 40px;
+}
+.detail_link li{
+    @extend %fl;
+    padding-right: 14px;
+}
+.detail_link li a{
+    display: block;
+    @include elesize($wid:20px,$hei:40px);
+    padding:0 10px;
+    @extend %fl;
+}
+.ico-home{
+    display: inline-block;
+    @include elesize($wid:20px,$hei:14px);
+    background: url(../img/ico.png) 0 -45px no-repeat;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+.icon-to{
+    display: inline-block;
+    @include elesize($wid:7px,$hei:21px);
+    background: url(../img/ico_arrow.png) -64px -85px no-repeat;
+    vertical-align: middle;
+}
+.detail-main{
+    @include elesize($wid:1200px,$hei:auto);
+    overflow: hidden;
+}
+.detail-left{
+    @include elesize($wid:1020px,$hei:auto);
+    @extend %fl;
+}
+.detail-intro{
+    @include elesize($wid:1020px,$hei:453px);
+    margin-bottom: 20px;
+}
+.goods-show{
+    @include elesize($wid:380px,$hei:443px);
+    position: relative;
+    @extend %fl;
+}
+.goods-img{
+    @include elesize($wid:380px,$hei:380px);
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+}
+.goods-img img{
+    @include elesize($wid:380px,$hei:380px);
+}
+.mark{
+    @include elesize($wid:200px,$hei:200px);
+    background: aqua;
+    @include opacity(0.5);
+    position: absolute;
+    top:0;
+    left:0;
+    display: none;
+}
+.big-img{
+    @extend .goods-img;
+    @include elePos($top:0,$left:390px);
+    z-index: 2;
+    display: none;
+}
+.big-img img{
+    @include elesize($wid:760px,$hei:760px);
+    position: absolute;
+}
+.goods-share{
+    @include elesize($wid:378px,$hei:32px);
+    padding-top:30px;
+}
+.share{
+    @extend %fl;
+}
+.goods-share .share a{
+    display: block;
+    @include elesize($wid:44px,$hei:16px);
+    line-height: 16px;
+}
+.goods-share .share a span{
+    display: inline-block;
+    @include elesize($wid:16px,$hei:16px);
+    background: url(../img/ico.png) no-repeat -25px -23px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+.goods-share .collect{
+    @extend .share;
+    margin-left: 20px;
+}
+.goods-share .collect a span{
+    background: url(../img/ico.png) no-repeat 0 -2px;
+}
+.tip-note{
+    @extend %fr;
+}
+.iconnote{
+    display: inline-block;
+    @include elesize($wid:16px,$hei:16px);
+    background: url(../img/ico.png) no-repeat 0 -23px;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+.goods-data{
+    @include elesize($wid:600px,$hei:439px);
+    padding-left:40px;
+    @extend %fl;
+}
+.goods-data h1{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.detail-intro dl{
+    width:100%;
+    @include clearfix;
+}
+.detail-intro dt{
+    @include elesize($wid:80px,$hei:40px);
+    line-height: 40px;
+    @extend %fl;
+}
+.detail-intro dd{
+    @extend %fl;
+}
+.goods-price dd{
+    height:77px;
+    @include clearfix;
+}
+
+.big{
+    font-size: 30px;
+    font-weight: 700px;
+}
+.goods-price p{
+    line-height: 18px;
+    margin: 5px 0;
+}
+.red{
+    background-color: #F25E5A;
+    color:#fff;
+}
+.tex_fee i{
+    font-weight: bold;
+    margin-right: 8px;
+}
+.tex_fee span{
+    margin-right: 8px;
+    color:#9d9d9d;
+}
+.goods-sale{
+    padding-top:10px;
+}
+.goods-sale i{
+    background: #c24259;
+    color:#fff;
+    padding:0 3px;
+    margin-right: 5px;
+}
+.goods-sale a{
+    margin-left: 10px;
+}
+.goods-sale a:hover{
+    text-decoration: underline;
+}
+.goods-collect{
+    height:24px;
+    margin-top: 14px;
+    padding: 10px 0;
+    border-top:1px dotted #ccc;
+    border-bottom:1px dotted #ccc;
+    line-height: 24px;
+}
+.goods-num{
+    height: 40px;
+    padding-top:20px;
+}
+.number{
+    @include elesize($wid:60px,$hei:36px);
+    padding-top:4;
+    position: relative;
+}
+.number input{
+    @include elesize($wid:38px,$hei:28px);
+    line-height: 28px;
+    text-align: center;
+    border:1px solid #e5e5e5;
+    @extend %fl;
+}
+.add{
+    display: block;
+    @include elesize($wid:14px,$hei:8px);
+    border: 1px solid #e5e5e5;
+    position: absolute;
+    top:0;
+    right:0;
+    text-align: center;
+    padding-top: 4px;
+}
+.add span{
+    @include triangle($c:#000,$direction:top);
+    vertical-align: top;
+}
+.reduce{
+    @extend .add;
+    top:17px;
+    padding-top: 0;
+    height:6px;
+    padding-bottom: 8px;
+}
+.reduce span{
+    @include triangle($c:#000,$direction:bottom);
+    vertical-align: bottom;
+}
+.goods-btn{
+   @include elesize($wid:522px,$hei:38px); 
+   padding:30px 0 0 80px;
+   @include clearfix;
+}
+.buy-now{
+    display: block;
+    @extend %fl;
+    @include elesize($wid:136px,$hei:34px);
+    border: 2px solid #E14958;
+    color:#E14958;
+    text-align: center;
+    line-height: 34px;
+    margin-right: 20px;
+    font-size: 16px;
+}
+.cart-add{
+    display: block;
+    @extend %fl;
+    @include elesize($wid:140px,$hei:38px);
+    background-color:#E14958;
+    text-align: center;
+    line-height: 34px;
+    color:#fff;
+    font-size: 16px;
+}
+.goods-tips{
+   @include elesize($wid:522px,$hei:22px); 
+   padding:30px 0 0 80px;
+   @include clearfix;
+}
+.goods-tips li{
+    padding-right: 10px;
+    margin-right: 20px;
+    @extend %fl;
+}
+.goods-tips li span{
+    display: inline-block;
+    @include elesize($wid:20px,$hei:22px);
+    margin-right: 10px;
+    background: url(../img/ico_mark.png) 0 -36px no-repeat;
+    vertical-align: middle;
+}
+.goods-tips .tip2{
+    background-position: -67px -36px;
+}
+.goods-tips .tip3{
+    background-position: 0 -8px;
+}
+.detail-content{
+    width:100%;
+    height:auto;
+    padding-bottom: 50px;
+}
+.tag{
+    @include elesize($wid:100%,$hei:40px);
+    border-bottom: 1px solid #999;
+}
+.tag li{
+    @include elesize($wid:124px,$hei:36px);
+    @extend %fl;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+    border:1px solid #fff;
+    border-top:3px solid #fff;
+    border-bottom: none;
+    cursor: pointer;
+}
+.tag .current{
+    border:1px solid #999;
+    border-top:3px solid #999;
+    border-bottom: 1px solid #fff;
+    margin-top: 1px;
+}
+.detail-info1{
+    @include elesize($wid:960px,$hei:117px);
+    padding-top:26px;
+    margin:  0 auto;
+    border-bottom: 1px dotted #ccc;
+}
+.detail-info1 dl{
+    @include elesize($wid:100%,$hei:100%); 
+}
+.detail-content dt{
+    @include elesize($wid:100%,$hei:19px);
+    font-size: 14px;
+    font-weight: bold;
+}
+.detail-info1 dd{
+    padding:16px 0;
+    line-height: 22px;
+}
+.detail-info1 dd span{
+    white-space: nowrap;
+    margin-right: 56px;
+}
+.detail-info2{
+    @extend .detail-info1;
+    height:480px;
+}
+.pic-show{
+    padding-bottom: 20px;
+}
+.triple-img{
+    @include elesize($wid:308px,$hei:308px);
+    margin: 5px;
+    border: 1px solid #e5e5e5;
+    overflow: hidden;
+    @extend %fl;
+    position: relative;
+}
+.triple-img img{
+    position: absolute;
+}
+.detail-info3{
+    @extend .detail-info1;
+    height:1120px;
+}
+.double-img{
+    position: relative;
+    border: 1px solid #e5e5e5;
+    @include elesize($wid:468px,$hei:468px);
+    margin: 5px;
+    float: left;
+    overflow: hidden;
+}
+.double-img img{
+    position: absolute;
+}
+.detail-info4{
+    @extend .detail-info1;
+    height:96px;
+}
+.detail-info5{
+    @extend .detail-info1;
+    height:176px;
+}
+.detail-right{
+    @include elesize($wid:146px,$hei:481px);
+    @extend %fr;
+    margin-right: 15px;
+}
+.sidebar-buy{
+    padding-top: 30px;
+    line-height: 20px;
+}
+.sidebar-buy .title{
+    @include elesize($wid:100%,$hei:10px);
+    padding-bottom: 20px;
+    border-top: 1px dotted #ccc;
+}
+.sidebar-buy .title p{
+    width:82px;
+    margin-top: -10px;
+    margin-left: 30px;
+    text-align: center;
+    font-size: 14px;
+    background: #fff;
+}
+.sidebar-buy ul{
+    @include elesize($wid:100%,$hei:400px);
+}
+.sidebar-buy li{
+    padding-bottom: 16px;
+}
+.cover-img{
+    background-position: center center;
+    background-size: cover;
+}
+.img-ct{
+    @include elesize($wid:140px,$hei:140px);
+    margin-bottom: 4px;
+}
+.sidebar-buy .goods-price .old-price{
+    text-decoration: line-through;
+}
+.sidebar-buy .goods-title{
+    width:140px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.scroll{
+    @include elesize($wid:140px,$hei:20px);
+}
+.scroll span{
+    display: inline-block;
+    @include elesize($wid:20px,$hei:16px);
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+}
+.scrollup{
+    margin-left: 40px;
+    background: url(../img/ico_arrow.png) -29px -2px no-repeat;
+}
+.scrolldown{
+    margin-left: 30px;
+    background: url(../img/ico_arrow.png) 0 -2px no-repeat;
+}

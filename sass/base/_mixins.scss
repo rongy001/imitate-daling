@@ -1,0 +1,22 @@
+
+@import "../mixins/elesize";
+@import "../mixins/creat-triangle";
+@import "../mixins/clearfix";
+@import "../mixins/opacity";
+@import "../mixins/omit";
+
+%centerEle{
+  width: 1200px;
+  margin: 0 auto;  
+}
+%fl{
+    float:left;
+}
+%fr{
+    float:right;
+}
+@mixin elePos($top:0px,$left:0px){
+    position: absolute;
+    top:$top;
+    left:$left;
+}

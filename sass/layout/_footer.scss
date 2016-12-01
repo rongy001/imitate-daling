@@ -1,0 +1,113 @@
+//footer_S
+.footer{
+   @include elesize($wid:100%,$hei:389px); 
+   clear: both;
+   font-size: 14px;
+}
+.footer .assure{
+    @include elesize($wid:100%,$hei:79px); 
+    border-bottom: solid 1px #e0e0e0;
+    box-shadow: 0 2px 2px #e0e0e0;
+    border-top: solid 1px #d8d8d8;
+    line-height: 79px;
+}
+.assure ul{
+    @include elesize($wid:960px,$hei:79px); 
+    margin: 0 auto;
+}
+.assure ul li{
+    @include elesize($wid:150px,$hei:79px); 
+    @extend %fl;
+    margin-left: 110px;
+}
+.assure ul li span{
+    display: inline-block;
+    @include elesize($wid:30px,$hei:30px);
+    vertical-align: middle;
+    background: url(../../img/ico-assure.png);
+    margin-right: 7px;
+}
+.assure ul li .assure_img2{
+    background-position: -36px 0;
+}
+.assure ul li .assure_img3{
+    background-position: -73px 0;
+}
+.assure ul .reson{
+    @include elesize($wid:180px,$hei:79px); 
+    margin-left: 0;
+}
+.assure ul .reson .ico_arrow{ 
+    @include elesize($wid:22px,$hei:41px);
+    margin-left: 40px;
+    background: url(../../img/ico_arrow.png) no-repeat -2px -135px;
+}
+.investor{
+    @include elesize($wid:1110px,$hei:80px);
+    padding:24px 0 40px 42px;
+    margin: 0 auto;
+    border-bottom: 1px solid #d8d8d8;
+}
+.investor dl{
+    @extend %fl;
+}
+.investor dl dt{
+    font-size: 18px;
+    line-height: 40px;
+}
+.investor dl dd{
+    line-height: 20px;
+}
+.investor .description1{
+    @include elesize($wid:660px,$hei:60px);
+}
+.investor .description1 dt{
+    @include elesize($wid:660px,$hei:40px);
+}
+.investor .description1 dd{
+    @include elesize($wid:660px,$hei:20px);
+}
+.investor .description2{
+    @include elesize($wid:450px,$hei:80px);
+}
+.investor .description1 dt{
+    @include elesize($wid:450px,$hei:40px);
+}
+.investor .description1 dd{
+    @include elesize($wid:450px,$hei:40px);
+}
+.copyright{
+    @include elesize($wid:100%,$hei:143px);
+    text-align: center;
+    padding-bottom: 20px;
+}
+.copyright .about_us{
+    @include elesize($wid:100%,$hei:19px);
+    padding-top:20px;
+}
+.about_us ul{
+    @include elesize($wid:680px,$hei:19px);
+    margin: 0 auto;
+}
+.copyright ul li{
+    @extend %fl;    
+}
+.about_us ul li a{
+    padding: 0 10px;
+}
+.about_us ul li a:hover{
+    text-decoration: underline;
+}
+.identity{
+   @include elesize($wid:530px,$hei:45px); 
+   margin: 20px auto; 
+}
+.identity ul{
+   @include elesize($wid:600px,$hei:19px);
+   line-height: 45px;
+}
+.identity li a{
+    display: block;
+    @include elesize($wid:114px,$hei:45px);
+    background: url(../../img/cert.png) no-repeat;
+}

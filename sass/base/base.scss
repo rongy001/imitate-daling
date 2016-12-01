@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+@import "public";
+@import "mixins";
+//header
+@import "../layout/header";
+
+//banner
+@import "../layout/banner";
+
+//nav
+@import "../layout/nav";
+
+//footer
+@import "../layout/footer";
+
+//sidebar
+@import "../layout/sidebar";

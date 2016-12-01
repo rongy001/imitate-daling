@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" href="css/base/base.css" />
+		<link rel="stylesheet" href="css/shopping-cart.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="js/shopping-cart.js"></script>
+	</head>
+	<body>
+		<div id="header_w"></div>
+		<div class="da_cart">
+			<div class="cart_top">
+				<div class="logo">
+					<h1>
+						<a href="index.html">达令,一手全球好货</a>
+					</h1>
+				</div>
+				<div class="cart_step">
+					<ul>
+						<li class="cart1">
+							<span class="triangle"></span>
+                        	<span class="icon-number">1</span>
+                        	查看购物车
+						</li>
+						<li class="cart2">
+							<span class="triangle"></span>
+                       	 	<span class="icon-number">2</span>确认订单信息
+                       	 	<span class="icon-to"></span>
+						</li>
+						<li class="cart3">
+							<span class="triangle"></span>
+                       	 	<span class="icon-number">3</span>成功提交订单
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="cart_tab">
+				<div class="cart_header">
+					<ul>
+			            <li class="th th-check">
+			                <label>
+			                    <input type="checkbox" class="check selall" checked/>
+			                    	全选
+			                </label>
+			            </li>
+			            <li class="th th-name">
+			               	 商品名称
+			            </li>
+			            <li class="th th-price">
+			                	单价（元）
+			            </li>
+			            <li class="th th-number">
+			                	数量
+			            </li>
+			            <li class="th th-total">
+			                	小计（元）
+			            </li>
+			            <li class="th th-handle">
+			               	 操作
+			            </li>
+        			</ul>
+				</div>		
+				<div class="cart-empty">
+					<div class="cart-empty-bg">
+						<strong></strong>
+						<span>购物车空空的哦~，去看看心仪的商品吧~<br />
+						<a href="../index.html">去购物></a>
+						</span>
+					</div>
+				</div>
+				<div class="cart_list">
+					<div class="goods-header">
+						<span class="ico-active">
+							无敌价
+						</span>
+						<span>价格无敌，手慢无</span>
+					</div>
+					<ul class="goods">
+						 <li class="td td-check">
+        					<input type="checkbox"  class="check" checked/>
+						</li>
+						<li class="td td-goods">
+							<a href="javascript:;" class="cover">
+								<div class="cover_img"></div>
+							</a>
+							<a href="javascript:;" class="name">
+								<span class="goods-title"></span>
+							</a>
+						</li>
+						<li class="td td-price">
+							<p>￥<span class="price"></span></p>
+						</li>
+						<li class="td td-number">
+							<div>
+								<a href="javascript:;" class="but-num reduce">-</a>
+								<input type="text" value="1" />
+								<a href="javascript:;" class="but-num add">+</a>
+							</div>
+						</li>
+						<li class="td td-total">
+							<p>￥<span class="total"></span></p>
+						</li>
+						<li class="td td-handle">
+							<a href="javascript:;" class="del">删除</a>
+						</li>
+					</ul>
+				</div>
+				<div class="total-box">
+					<label class="sel-all">
+                		<input type="checkbox"  class="selall check" checked/>
+                		全选
+          			</label>
+          			<div class="option">
+                		<a href="javascript:;">删除选中的商品</a>
+                		<a href="javascript:;">移到我的收藏</a>
+            		</div>
+            		<div class="toolbar">
+            			<a href="javascript:;" class="btn-count">去结算</a>
+            			<div class="total-count">
+            				总金额:<span class="red">￥<span class="all-total">0.00</span></span>
+            			</div>
+            			<div class="ammount">
+            				已选中<span class="count red">0</span>件商品
+            			</div>
+            		</div>
+				</div>
+			</div>
+			<div class="cart-collect">
+				<div class="title">
+					<p>我的收藏</p>
+				</div>
+				<div class="c-box">
+					<ul>
+						<li>
+							<a href="javascript:;">
+								<div class="cover_img"></div>
+								<p class="price">					
+									<span>￥</span>
+									<span class="new-price"></span>
+									<span class="old-price"></span>
+								</p>
+								<p class="good-title"></p>
+							</a>
+							<a href="javascript:;" class="btn-cart">加入购物车</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<div class="cover_img"></div>
+								<p class="price">					
+									<span>￥</span>
+									<span class="new-price"></span>
+									<span class="old-price"></span>
+								</p>
+								<p class="good-title"></p>
+							</a>
+							<a href="javascript:;" class="btn-cart">加入购物车</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<div class="cover_img"></div>
+								<p class="price">					
+									<span>￥</span>
+									<span class="new-price"></span>
+									<span class="old-price"></span>
+								</p>
+								<p class="good-title"></p>
+							</a>
+							<a href="javascript:;" class="btn-cart">加入购物车</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<div class="cover_img"></div>
+								<p class="price">					
+									<span>￥</span>
+									<span class="new-price"></span>
+									<span class="old-price"></span>
+								</p>
+								<p class="good-title"></p>
+							</a>
+							<a href="javascript:;" class="btn-cart">加入购物车</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<div class="cover_img"></div>
+								<p class="price">					
+									<span>￥</span>
+									<span class="new-price"></span>
+									<span class="old-price"></span>
+								</p>
+								<p class="good-title"></p>
+							</a>
+							<a href="javascript:;" class="btn-cart">加入购物车</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="footer">
+			
+		</div>
+	</body>
+</html>
